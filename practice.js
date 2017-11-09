@@ -3,7 +3,6 @@
 function GolfCourse (name) {
     this.name = name;
     this.holes = 18;
-    
 }
 
 
@@ -16,9 +15,9 @@ function AvgScore () {
     return value;
 }
 
-const scores = [3,2,4,5,7, 20, 4, 5, 100];
+const scores = [3,2,4,5,7, 20, 4, 5, 4,2,6,8];
 
-const avg = AvgScore(scores);
+const avg = AvgScore();
 console.log(scores);
 console.log(avg);
 console.log(GolfCourse);
