@@ -31,13 +31,36 @@ function init(){
     eightBall.src = 'eightBall.jpg';
 }
 
-function draw(){
-    const ctx = document.getElementById('canvas').getContext('2d');
-    ctx.clearRect(0,0,500,500);
+// function draw(){
+//     const ctx = document.getElementById('canvas').getContext('2d');
+//     ctx.clearRect(0,0,500,500);
 
-    ctx.fillStyle = 'rgba(0,0,0,0)';
-    ctx.drawImage(eightBall, 0, 0, 250,250);
-}
+//     ctx.fillStyle = 'rgba(0,0,0,0)';
+//     ctx.drawImage(eightBall, 0, 0, 250,250);
+// }
 
 init();
+// draw();
+
+function draw(){
+    const ctx = document.getElementById('canvas').getContext('2d');
+    ctx.clearRect(0,0,700,700);
+    
+    ctx.drawImage(eightBall, -5, -5, 250,250);
+    ctx.clearRect(0,0,700,700);
+
+    ctx.drawImage(eightBall, 5, 5, 250, 250);
+    ctx.clearRect(0,0,700,700);
+
+    ctx.drawImage(eightBall, 0, 0, 250, 250);
+
+}
+setInterval(draw, 50000);
+// setTimeout(draw, 500000);
 draw();
+
+
+
+
+
+
