@@ -1,5 +1,5 @@
 const answersArray = ['yes', 'no', 'absolutely', 'possibly', 'highly unlikly', 'who knows'];
-const userAnswers = ['test'];
+const userAnswers = [];
 
 
 // returns random answer. If userAnswers contains answers returns random one from it otherwise random one from answersArray
@@ -13,6 +13,27 @@ function randomAnswer(){
         return ans;
     }
 }
+
+//event handler to add user input as possible answers
+const form = document.getElementById('userInput');
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const newAnswer = document.getElementById('newAnswer').value;
+    userAnswers.push(newAnswer);
+
+});
+
+//event handler to clear user answer array. Which makes answers used
+//the original provided answers
+const clear = document.getElementById('clear');
+clear.addEventListener('click', function(e){
+    e.preventDefault();
+    console.log('inside clear handler');
+    userAnswers.length = 0;
+});
+
+
+
 
 // console.log(randomAnswer());
 
