@@ -28,14 +28,12 @@ form.addEventListener('submit', function(e){
 const clear = document.getElementById('clear');
 clear.addEventListener('click', function(e){
     e.preventDefault();
-    console.log('inside clear handler');
     userAnswers.length = 0;
 });
 
 
 
 
-// console.log(randomAnswer());
 
 const button = document.getElementById('button');
 button.addEventListener('click', clickHandler);
